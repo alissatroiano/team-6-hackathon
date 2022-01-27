@@ -36,9 +36,8 @@ The final version of this website will allow weCare to achieve its' goals by imp
 | 2 | USER | As a user, I want to be able to view my weCare wellness scores | So I can understand my mental well-being and weCare package items | Incomplete |
 | 3 | USER | As a user, I want to be able to select one of the activities in my care package | So I can complete the activity I feel I need the most | Incomplete |
 | 4 | USER | As a user, I want to be able to complete the activities in my care package | So I can use the wellness materials provided for me | Incomplete |
-| 5 | USER | As a user, I want to be able to complete the activities in my care package | So I can use the wellness materials provided for me | Incomplete |
-| 6 | CUSTOMER | As a customer, I want to provide a fun, uplifting program | So the mental health needs of my employees can be addressed | Incomplete |
-| 7 | CUSTOMER | As a customer, I want weCare to provide additional resources | So my employees can access emergency mental health services if needed | Incomplete |
-| 8 | CUSTOMER | As a customer, I want the product to be easy to navigate | So my employees can use it easily | Incomplete |
-| 9 | CUSTOMER | As a customer, I want the product to include appropriate content | So my employees will have a positive experience using it | Incomplete |
-| 10 | CUSTOMER | As a customer, I want the product to target the needs of specific users | So all employees will have a positive experience using it | Incomplete |
+| 5 | CUSTOMER | As a customer, I want to provide a fun, uplifting program | So the mental health needs of my employees can be addressed | Incomplete |
+| 6 | CUSTOMER | As a customer, I want weCare to provide additional resources | So my employees can access emergency mental health services if needed | Incomplete |
+| 7 | CUSTOMER | As a customer, I want the product to be easy to navigate | So my employees can use it easily | Incomplete |
+| 8 | CUSTOMER | As a customer, I want the product to include appropriate content | So my employees will have a positive experience using it | Incomplete |
+| 9 | CUSTOMER | As a customer, I want the product to target the needs of specific users | So all employees will have a positive experience using it | Incomplete |
