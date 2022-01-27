@@ -8,18 +8,26 @@ weCare is being specially designed & developed in conjuction with the [Trust in 
 
 ## UX
 
+### Features
+
 The goal of weCare is to provide a front-end web application that will assess & improve the mental & emotional well-being of young professionals in the workplace.
 
 In order to determine the features for this web application, our team conducted the following trade-off activity:
 
 ![feature trade off](wireframes/featuretradeoff.png)
 
+### User Stories
+
+User stories have been compiled by the development team to help prepare & plan our sprint schedule.
+
+The final version of this website will allow weCare to achieve its' goals by implementing software solutions that address the **user needs** defined in the table below. 
+
 ***Please note: the users mentioned in the below user needs table include***:
 
 1) The **user**: young professionals in the workplace that will be using this product
 2) The **customer**: The business' (user's employers) that will be administering this product to their employees
 
-The final version of this website will allow weCare to achieve its' goals by implementing software solutions that address the following **user needs**:
+#### **User Needs Table**
 
 | ID | ROLE | ACTION | GOAL | STATUS |
 |-----------------|:-------------|:---------------:|---------------:| ---------------:|
