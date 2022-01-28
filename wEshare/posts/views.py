@@ -1,7 +1,13 @@
 from django.shortcuts import render
+from allauth.account.forms import LoginForm
+from allauth.account.views import SignupView
 
 # Create your views here.
-
-def posts(request):
+def index(request):
     """ A view to return the index page """
-    return render(request, 'index.html')
+    template = 'index.html'
+    context ={
+        'LoginForm': LoginForm,
+        'SignupView': SignupView,
+    }
+    return render(request, template, context)
