@@ -44,7 +44,6 @@ The final version of this website will allow weShare to achieve its' goals by im
 | 8 | CUSTOMER | As a customer, I want the product to include appropriate content | So my employees will have a positive experience using it | Incomplete |
 | 9 | CUSTOMER | As a customer, I want the product to target the needs of specific users | So all employees will have a positive experience using it | Incomplete |
 
-
 ## CREDITS
 
 - https://coderwall.com/p/aey-rq/django-allauth-quick-setup
