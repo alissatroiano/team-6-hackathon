@@ -42,3 +42,24 @@
 </body>
 
 </html>
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="allauth-inner-content">
+  <div class="container-fluid mx-auto px-0">
+    <div class="col-12 text-center">
+      {% block inner_content %}{% endblock %}
+    </div>
+  </div>
+</div>
+{% endblock %}

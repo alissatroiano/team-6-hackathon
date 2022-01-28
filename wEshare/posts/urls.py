@@ -1,7 +1,7 @@
-from django.urls import path
-
-from .views import posts
+from django.urls import path, include
+from .views import index
 
 urlpatterns = [
-    path('', posts, name='posts'),
+    path('', index, name='index'),
+    path('accounts/', include('allauth.urls')),
 ]
