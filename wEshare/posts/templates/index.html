@@ -3,6 +3,9 @@
 {% load i18n %}
 
 {% block content %}
+
+{% include 'nav.html' %}
+
 <h1 class="display-4 text-success">It works!</h1>
 {% include "account/login.html" with form=LoginForm %}
 <p class="body-sm text-center py-1">Don't have an account?<br>
