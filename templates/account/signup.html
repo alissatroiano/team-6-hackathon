@@ -1,0 +1,29 @@
+{% extends "base_template.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+{% load static %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+
+<div class="container signup-container rounded-3 p-2 d-flex flex-column align-items-center justify-content-center mt-3 pb-4 mb-5">
+  <h1 class="text-center text-uppercase fw-bold fs-2"><i class="fa fa-snowflake-o snowflake-icon" aria-hidden="true"></i>
+     {% trans "Sign up" %} 
+    <i class="fa fa-snowflake-o snowflake-icon" aria-hidden="true"></i>
+  </h1>
+  <form class="signup d-flex justify-content-start flex-column" id="signup_form" method="post" action="{% url 'account_signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <div class="button-container w-100 text-center">
+      <button type="submit" class="signup-btn mt-4 w-50 p-3 rounded-2">{% trans "Sign Up" %} &raquo;</button>
+    </div>
+    <a href="" class="mt-4 login-link text-center">{% blocktrans %}Already have an account?{% endblocktrans %}</p>
+  </form>
+</div>
+
+{% endblock %}
