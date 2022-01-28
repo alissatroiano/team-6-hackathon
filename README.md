@@ -2,12 +2,8 @@
 
 The wEshare application is a messaging platform that is being built for young professionals (ages 24-36). The purpose of weShare is to provide a safe, online community where employees can discuss mental health and wellness issues in the workplace. The key features of the platform are:
 
-- **Daily Prompt** - A daily prompt will generate at the top of the page each day tot inspire thoughtful discussion and enforce positivity
-- **Messaging** - Users can post messages and communicate on the platform
-- **User Authentication** - Users can register and login to the platform
-- **24-hour lifespan of messages** - All messages will be deleted from the feed at the end of each day and will no longer be accessible to users. This will be implemented so users can start fresh each new day.
 
-wEshare is being specially designed & developed in conjuction with the [Trust in Soda January 2022 Code Institute Hackathon](https://hackathon.codeinstitute.net/hackathon/16/). The theme for this hackathon is 'Accelerating the Future of Workforce Well-Being and Miindfulness" and weShare is proud to provide a platform that will help young professionals improve their mental wellbeing in the workplace.
+weCare is being specially designed & developed in conjuction with the [Trust in Soda January 2022 Code Institute Hackathon](https://hackathon.codeinstitute.net/hackathon/16/). The theme for this hackathon is 'Accelerating the Future of Workforce Well-Being and Miindfulness" and weCare is proud to provide a platform that will help young professionals improve their mental wellbeing in the workplace.
 
 ***
 
