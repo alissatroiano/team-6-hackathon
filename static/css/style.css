@@ -1,0 +1,15 @@
+/* Google fonts imported */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
+
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
+
+/* Global styles */
+
+body{
+    font-family: 'Opem sans', sans-serif;
+}
