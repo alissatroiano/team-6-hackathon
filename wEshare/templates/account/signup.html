@@ -1,29 +1,66 @@
-{% extends "base_template.html" %}
-
+{% extends "account/base.html" %}
 {% load i18n %}
+
 {% load account socialaccount %}
-{% load static %}
 
-{% block head_title %}{% trans "Signup" %}{% endblock %}
-
-{% block content %}
-
-<div class="container signup-container rounded-3 p-2 d-flex flex-column align-items-center justify-content-center mt-3 pb-4 mb-5">
-  <h1 class="text-center text-uppercase fw-bold fs-2"><i class="fa fa-snowflake-o snowflake-icon" aria-hidden="true"></i>
-     {% trans "Sign up" %} 
-    <i class="fa fa-snowflake-o snowflake-icon" aria-hidden="true"></i>
-  </h1>
-  <form class="signup d-flex justify-content-start flex-column" id="signup_form" method="post" action="{% url 'account_signup' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
-    <div class="button-container w-100 text-center">
-      <button type="submit" class="signup-btn mt-4 w-50 p-3 rounded-2">{% trans "Sign Up" %} &raquo;</button>
-    </div>
-    <a href="" class="mt-4 login-link text-center">{% blocktrans %}Already have an account?{% endblocktrans %}</p>
-  </form>
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
 </div>
+{% endblock %}
 
+{% block inner_content %}
+<div class="hue-signup container-fluid text-center mx-auto my-0" id="signup-container">
+  <div class="row flex-wrap g-0 signup-auth-wrapper my-0 mx-auto">
+    <div class="col-12 col-md-7 col-lg-6 signup-main-col text-center px-0 py-0">
+      <div class="d-flex flex-column align-content-center pt-5">
+        <div class="app-auth-body my-0 mx-auto text-center">
+          <div class="my-0 mx-auto text-center">
+            <i class="fas fa-tint fa-3x my-4"></i>
+            <h2 class="py-2 text-center heading-lg">Signup</h2>
+            <hr class="mt-4">
+            <div class="auth-form-container text-start">
+              <!--auth-form-->
+              <!--signup form starts here -->
+              <form class="signup" id="signupForm" method="post" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                {% if redirect_field_value %}`~
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <div class="form-group row justify-content-center text-center">
+                  <button class="btn btn-primary loginButton px-3 py-2 my-4" type="submit" aria-label="submit">Sign
+                    Up</button>
+                </div>
+                <!--./end-form-group-->
+                <div class="form-group row justify-content-center text-center">
+                  <p class="body-font my-2">
+                    Already have an account?
+                    <br>
+                    <a class="my-2 text-center link-font" href="{{ login_url }}">Login</a>
+                  </p>
+                </div>
+                <!--./end-form-group-->
+              </form>
+              <!--./end-form-->
+            </div>
+            <!--./end-form-container-->
+          </div>
+          <!--./end-app-auth-body-->
+        </div>
+        <!--./end-flex-col-->
+      </div>
+      <!--./end-col-->
+    </div>
+    <div class="col-12 col-md-5 col-lg-6 h-100 signup-background-col">
+      <div class="signup-background-lg"> </div>
+      <div class="signup-background-mask"></div>
+      <div class="signup-background-overlay p-3 p-lg-5 d-none d-lg-flex"></div>
+    </div>
+  </div>
+  <!--./end-row-->
+</div>
+<!--./end-container-->
 {% endblock %}

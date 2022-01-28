@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <h1 class="display-4 text-success">It works!</h1>
+{% include "account/login.html" with form=LoginForm %}
+
 {% endblock %}
