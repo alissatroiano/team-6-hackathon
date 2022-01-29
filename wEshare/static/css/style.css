@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
 
 /*Background styles */
-/* Code sourced from here: https://www.sliderrevolution.com/resources/css-animated-background/*/
+/* Code for background gradient sourced from here: https://www.sliderrevolution.com/resources/css-animated-background/*/
 
 * {
 	padding: 0;
@@ -9,8 +9,12 @@
 	box-sizing: border-box;
 }
 
-body.log-in-page {
+body{
 	font-family: 'Open sans', sans-serif;
+	letter-spacing: 4px;
+}
+
+body.log-in-page {
 	background: linear-gradient(-45deg, #57c0b4, #20685f, #117267, #57c0b4);
 	background-size: 400% 400%;
 	animation: gradient 25s ease infinite;
@@ -50,6 +54,8 @@ a:visited {
 	grid-auto-rows: minmax(min-content, max-content);
 	align-items: center;
 	justify-items: center;
+	padding:0 20px;
+	text-align:center;
 }
 
 .weshare-intro h2 {
@@ -58,24 +64,17 @@ a:visited {
 	-webkit-text-stroke-width: 0.5px;
 	-webkit-text-stroke-color: #2b5c56;
 	text-shadow: 6px 6px #256b63;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 }
 
-.intro-grid-row-2 {
+.intro-grid-row-2, h1.intro-grid-row-2 {
 	grid-row: 2/3;
-	font-size: 2.8424rem;
 	padding: 20px;
 	text-transform: uppercase;
+	font-size:2.8rem;
 }
 
-p {
-	font-size: 2rem;
-	line-height: 1.5;
-	letter-spacing: 1px;
-	text-align: center;
-}
-
-p.intro-grid-row-2 {
+.tagline {
 	transform: translate(-50%, -50%);
 	letter-spacing: 0.1em;
 	-webkit-text-fill-color: #fff;
@@ -106,23 +105,37 @@ p.intro-grid-row-2 {
 
 #sign-in-form {
 	margin: auto;
-	width: 10rem;
 	padding: 20px;
 }
 
-.text-input {
+/* Username and password input styles */
+
+input#id_login, input#id_password {
 	background: #fcfcfc;
 	color: #252525;
-	height: 40px;
+	height: 50px;
+	width:400px;
 	border-radius: 50px;
 	border: 1px solid #fcfcfc;
 	margin: 10px;
 	padding: 10px;
 }
 
-.text-input:hover {
+input#id_login:hover, input#id_password:hover {
 	border: 2px solid #57c0b4;
+	
 }
+
+/* Checkbox on log in page */
+
+#id_remember{
+	height:20px;
+	width:20px;
+	background: #fcfcfc;
+	border: 1px solid #fcfcfc;
+}
+
+/* Log in button styles */
 
 button.primaryAction {
 	margin-top: 20px;
