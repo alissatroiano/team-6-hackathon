@@ -14,7 +14,7 @@ body{
 	letter-spacing: 4px;
 }
 
-body.log-in-page {
+body.log-in-page, body.log-in-out-page{
 	background: linear-gradient(-45deg, #57c0b4, #20685f, #117267, #57c0b4);
 	background-size: 400% 400%;
 	animation: gradient 25s ease infinite;
@@ -52,7 +52,7 @@ a:link:hover{
 
 /* Sign up page styles */
 
-.weshare-intro {
+.weshare-intro, .weshare-outro{
 	display: grid;
 	grid-auto-rows: minmax(min-content, max-content);
 	align-items: center;
@@ -61,7 +61,7 @@ a:link:hover{
 	text-align:center;
 }
 
-.weshare-intro h2 {
+.weshare-intro h2, .weshare-outro h2 {
 	line-height: 2;
 	letter-spacing: 2px;
 	-webkit-text-stroke-width: 0.5px;
@@ -86,7 +86,7 @@ a:link:hover{
 	text-shadow: 6px 6px #256b63;
 }
 
-#sign-in-section {
+#sign-in-section{
 	width: 50%;
 	position: absolute;
 	top: 50%;
