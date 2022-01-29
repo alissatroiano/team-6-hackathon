@@ -4,5 +4,11 @@
 
 {% block content %}
 <h1 class="display-4 text-success">Your in!</h1>
-{{ post }}
-{% endblock %}
+{% if user.posts %}
+{% for post in posts %}
+<p class="text-dark">{{ post.description }}
+</p>
+{% endfor %}
+{% endif %}
+
+{% endblock %}`
