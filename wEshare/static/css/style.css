@@ -128,12 +128,6 @@ input#id_login:hover, input#id_password:hover {
 
 /* Checkbox on log in page */
 
-#id_remember{
-	height:20px;
-	width:20px;
-	background: #fcfcfc;
-	border: 1px solid #fcfcfc;
-}
 
 /* Log in button styles */
 
