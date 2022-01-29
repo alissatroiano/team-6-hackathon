@@ -7,7 +7,7 @@
 {% include 'nav.html' %}
 
 <body class="log-in-page">
-	<section id="sign-in-section">
+	<section id="sign-in-sections">
 		<div class="weshare-intro">
 			<h1 class="intro-grid-row-2">
 				<p class="intro">New day new you</p>
@@ -18,8 +18,11 @@
 				The workplace sharing chat that disappears at the end of the day
 			</h2>
 		</div>
+		<div class="sign-in-container">
+			<!-- Start of sign up form-->
+			{% include "account/login.html" with form=LoginForm %}
+		</div>
 
-		<!-- Start of sign up form-->
 		<p>No profile created? <a href="#" alt="link to sign up page">Sign-up here</a></p>
 	</section>
 </body>

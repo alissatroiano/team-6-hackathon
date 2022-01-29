@@ -1,9 +1,12 @@
 from django.db import models
-import uuid
-from django.utils import timezone
-from datetime import datetime
-now = timezone.now
 from django.contrib.auth.models import User
+import uuid
+import os
+
+from django.utils import timezone
+now = timezone.now
+
+from datetime import datetime
 from django.conf import settings
 
 # Create your models here.
@@ -16,6 +19,7 @@ class Post(models.Model):
     date_updated = models.DateTimeField(auto_now=True, verbose_name="date updated")
     # user = models.ForeignKey(settings.ACCOUNT_AUTHENTICATION_METHOD, on_delete=models.CASCADE)
     user = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE)
+    deleted_at = models.DateTimeField(auto_now=True)
 
     def posting_content(self):
         """ Displaying the posted content """
