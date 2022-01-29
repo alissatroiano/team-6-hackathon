@@ -18,7 +18,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Font Awesome v6-->
     <script src="https://kit.fontawesome.com/061390ffe7.js" crossorigin="anonymous"></script>
-
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,14 +34,13 @@
 </head>
 
 <body>
-
     {% block content %}
     {% endblock %}
-
     <!-- Footer section -->
-    <footer class="fixed-bottom text-center bg-secondary mt-3 pt-3">
-        <div class="my-2"><i class="fab fa-twitter"></i> <i class="fab fa-facebook"></i></div>
-        <div class="my-2">wEshare 2022 All Rights Reserved</div>
+    <footer class="fixed-bottom text-center bg-transparent my-3 pt-3">
+        <div class="mx-2 float-end">
+            <a class="btn-large text-info" href="{% url 'create_post' %}"><i class="fas fa-comment fa-2x"></i></a>
+        </div>
     </footer>
 
     {% block corejs %}
