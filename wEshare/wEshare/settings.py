@@ -54,12 +54,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # adding timeout session after installation
-    # 'django_session_timeout.middleware.SessionTimeoutMiddleware'
 ]
 
-SESSION_EXPIRE_SECONDS = 3600  # 1 hour as an example,timeout function can be arranged
+# SESSION_EXPIRE_SECONDS = 3600  # 1 hour as an example,timeout function can be arranged
 
-SESSION_TIMEOUT_REDIRECT = 'your_redirect_url_here/' # maybe logout page or something as redirect
+# SESSION_TIMEOUT_REDIRECT = 'your_redirect_url_here/' # maybe logout page or something as redirect
 
 ROOT_URLCONF = 'wEshare.urls'
 
@@ -94,12 +93,14 @@ SITE_ID = 1
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 ACCOUNT_USERNAME_MIN_LENGTH = 4
-LOGIN_URL = 'accountslogin/'
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/posts/view_posts'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
-ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = False
-ACCOUNT_SIGNUP_REDIRECT_URL = "/"
+# ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = False
+# ACCOUNT_SIGNUP_REDIRECT_URL = "/"
 
 WSGI_APPLICATION = 'wEshare.wsgi.application'
 
@@ -148,13 +149,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/assets/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "assets"),
+    os.path.join(BASE_DIR, "static"),
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
