@@ -20,8 +20,8 @@ def index(request):
 @login_required
 def view_posts(request):
     """ A view to return the posts page """
-    post = Post.objects.get(user=request.user)
+    posts = Post.objects.all()
     context = {
-        'post': post
+        'posts': posts
     }
     return render(request, 'posts.html', context)

@@ -25,6 +25,7 @@ a:visited {
 	text-decoration: none;
 	border-bottom: 0.5px solid #fcfcfc;
 	padding-bottom: 2px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 /* Background animation */
@@ -69,7 +70,6 @@ a:visited {
 }
 
 p {
-	font-size: 2rem;
 	line-height: 1.5;
 	letter-spacing: 1px;
 	text-align: center;
@@ -139,4 +139,14 @@ p.intro-grid-row-2 {
 	background-color: #fafafa;
 	color: #57c0b4;
 	border: 2px solid #e9c46a;
+}
+
+p#activity {
+	font-size: 1rem;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a.navbar-brand {
+	font-family: 'Comforter', cursive;
+	font-family: 2rem;
 }
