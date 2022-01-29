@@ -53,7 +53,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # adding timeout session after installation
+    'django_session_timeout.middleware.SessionTimeoutMiddleware'
 ]
+
+SESSION_EXPIRE_SECONDS = 3600  # 1 hour as an example,timeout function can be arranged
+
+SESSION_TIMEOUT_REDIRECT = 'your_redirect_url_here/' # maybe logout page or something as redirect
 
 ROOT_URLCONF = 'wEshare.urls'
 
