@@ -86,7 +86,7 @@ a:link:hover{
 	text-shadow: 6px 6px #256b63;
 }
 
-#sign-in-section{
+#sign-in-section, #log-out-section{
 	width: 50%;
 	position: absolute;
 	top: 50%;
@@ -98,7 +98,9 @@ a:link:hover{
 }
 
 #sign-in-section,
-#sign-in-form {
+#log-out-section,
+#sign-in-form,
+#log-out-form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -124,7 +126,7 @@ input#id_login:hover, input#id_password:hover {
 
 /* Log in button styles */
 
-button.primaryAction {
+button.primaryAction, .logout-button{
 	margin-top: 20px;
 	border-radius: 40px;
 	padding: 15px 32px 15px 32px;
@@ -135,7 +137,7 @@ button.primaryAction {
 	color: #252525;
 }
 
-button.primaryAction:hover {
+button.primaryAction:hover, .logout-button:hover {
 	background-color: #fafafa;
 	color: #57c0b4;
 	border: 2px solid #e9c46a;
