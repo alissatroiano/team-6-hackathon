@@ -6,12 +6,32 @@
 <header>
 	{% include 'nav.html' %}
 </header>
+<div class="container">
+	<div class="row text-center d-flex">
+		<div class="col-12">
+			<small>
+				<p class="prompt" id="activity"></p>
+			</small>
+		</div>
+	</div>
+</div>
 <h1 class="display-4 text-success text-center">Feed</h1>
-{% if user.posts %}
+<div class="container">
+	<div class="row">
+		{% for post in posts %}
+		<div class="col-12">
+			<div class="card my-3">
+				<p>{{ post.user }}: {{ post.description }}
+					{{ post.content }}
+				</p>
+				<p class="text-small">{{ post.date_published }}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
 
-<p class="text-dark">{{ post.description }}
-</p>
 
-{% endif %}
 
-{% endblock %}
+
+{% endblock %}`

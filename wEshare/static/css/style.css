@@ -9,12 +9,13 @@
 	box-sizing: border-box;
 }
 
-body{
+body {
 	font-family: 'Open sans', sans-serif;
 	letter-spacing: 4px;
 }
 
-body.log-in-page, body.log-in-out-page{
+body.log-in-page,
+body.log-in-out-page {
 	background: linear-gradient(-45deg, #57c0b4, #20685f, #117267, #57c0b4);
 	background-size: 400% 400%;
 	animation: gradient 25s ease infinite;
@@ -28,14 +29,14 @@ a:visited {
 	color: #fcfcfc;
 	text-decoration: none;
 	padding-bottom: 2px;
+	font-family: 'Open Sans', sans-serif;
 }
 
-a:link:hover{
+a:link:hover {
 	border-bottom: 1px solid #fcfcfc;
 }
 
 /* Background animation */
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -51,17 +52,18 @@ a:link:hover{
 }
 
 /* Sign up page styles */
-
-.weshare-intro, .weshare-outro{
+.weshare-intro,
+.weshare-outro {
 	display: grid;
 	grid-auto-rows: minmax(min-content, max-content);
 	align-items: center;
 	justify-items: center;
-	padding:0 20px;
-	text-align:center;
+	padding: 0 20px;
+	text-align: center;
 }
 
-.weshare-intro h2, .weshare-outro h2 {
+.weshare-intro h2,
+.weshare-outro h2 {
 	line-height: 2;
 	letter-spacing: 2px;
 	-webkit-text-stroke-width: 0.5px;
@@ -70,11 +72,12 @@ a:link:hover{
 	font-size: 1.8rem;
 }
 
-.intro-grid-row-2, h1.intro-grid-row-2 {
+.intro-grid-row-2,
+h1.intro-grid-row-2 {
 	grid-row: 2/3;
 	padding: 20px;
 	text-transform: uppercase;
-	font-size:2.8rem;
+	font-size: 2.8rem;
 }
 
 .tagline {
@@ -86,7 +89,8 @@ a:link:hover{
 	text-shadow: 6px 6px #256b63;
 }
 
-#sign-in-section, #log-out-section{
+#sign-in-section,
+#log-out-section {
 	width: 50%;
 	position: absolute;
 	top: 50%;
@@ -107,26 +111,27 @@ a:link:hover{
 }
 
 /* Username and password input styles */
-
-input#id_login, input#id_password {
+input#id_login,
+input#id_password {
 	background: #fcfcfc;
 	color: #252525;
 	height: 50px;
-	width:300px;
+	width: 300px;
 	border-radius: 50px;
 	border: 1px solid #fcfcfc;
 	margin: 10px;
 	padding: 10px;
 }
 
-input#id_login:hover, input#id_password:hover {
+input#id_login:hover,
+input#id_password:hover {
 	border: 2px solid #57c0b4;
-	
+
 }
 
 /* Log in button styles */
-
-button.primaryAction, .logout-button{
+button.primaryAction,
+.logout-button {
 	margin-top: 20px;
 	border-radius: 40px;
 	padding: 15px 32px 15px 32px;
@@ -137,10 +142,45 @@ button.primaryAction, .logout-button{
 	color: #252525;
 }
 
-button.primaryAction:hover, .logout-button:hover {
+button.primaryAction:hover,
+.logout-button:hover {
 	background-color: #fafafa;
 	color: #57c0b4;
 	border: 2px solid #e9c46a;
 }
 
+p#activity {
+	font-size: 1rem;
+	font-family: 'Open Sans', sans-serif;
+}
 
+a.navbar-brand {
+	font-family: 'Comforter', cursive;
+	font-family: 2rem;
+}
+
+/* Posts Page Styles */
+.card {
+	color: white;
+	background-color: #927397;
+	margin: 10px 40px;
+	border: 2px solid #dedede;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.btn {
+	background-color: #0b6623;
+}
+
+.btn-primary {
+	border: none;
+	margin-top: 15px;
+	margin-right: 10px;
+	float: right;
+
+}
+
+.btn-primary:hover {
+	background-color: #cc92f8;
+}

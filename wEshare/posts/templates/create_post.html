@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+			<h1 class="text-center">New Post</h1>
+			<div class="card">
+				<div class="card-body">
+					<form method="POST" class="col-12">
+						{% csrf_token %}
+						{{ field }}
+						{{ form.as_p }}
+						<button class="btn btn-dark rounded-0" type="submit">Add Post</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
