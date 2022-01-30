@@ -10,6 +10,7 @@ from .forms import PostForm
 # Create your views here.
 def index(request):
     """ A view to return the index page """
+    
     template = 'index.html'
     context ={
         'LoginForm': LoginForm,
@@ -21,6 +22,7 @@ def index(request):
 @login_required
 def view_posts(request):
     """ A view to return the posts page """
+
     posts = Post.objects.all()
     context = {
         'posts': posts
@@ -45,5 +47,7 @@ def create_post(request):
     context = {
         'form': form,
     }
+
+    return render(request, template, context)
 
     return render(request, template, context)
