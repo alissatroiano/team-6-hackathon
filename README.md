@@ -43,6 +43,44 @@ The final version of this website will allow weShare to achieve its' goals by im
 | 8 | CUSTOMER | As a customer, I want the product to include appropriate content | So my employees will have a positive experience using it | Incomplete |
 | 9 | CUSTOMER | As a customer, I want the product to target the needs of specific users | So all employees will have a positive experience using it | Incomplete |
 
+### Wireframes
+
+<details><summary><b>Desktop Wireframes</b></summary>
+
+![Desktop Wireframe Log In page](static/wireframes/desktop-user-landing-page-wireframe.png)
+
+![Desktop Wireframe create account](static/wireframes/desktop-user-profile-creation-wireframe.png)
+
+![Desktop Wireframe Home Page](static/wireframes/desktop-user-login-wireframe.png)
+
+![Desktop Wireframe creating a message](static/wireframes/desktop-login-create-message-wireframe.png)
+
+</details>
+<details><summary><b>Tablet Wireframes</b></summary>
+
+![Tablet Wireframe Log in page](static/wireframes/tablet-user-landing-page-wireframe.png)
+
+![Tablet Wireframe create account](static/wireframes/tablet-user-profile-creation-wireframe.png)
+
+![Tablet Wireframe Home page](static/wireframes/tablet-user-login-wireframe.png)
+
+![Tablet Wireframe create message](static/wireframes/tablet-login-create-message-wireframe.png)
+
+</details>
+<details><summary><b>Mobile Wireframes</b></summary>
+
+![Mobile Wireframe Log in page](static/wireframes/mobile-user-landing-page-wirerame.png)
+
+![Mobile Wireframe create account](static/wireframes/mobile-user-profile-creation-wireframe.png)
+
+![Mobile Wireframe Home page](static/wireframes/mobile-user-login-wireframe.png)
+
+![Mobile Wireframe create message](static/wireframes/mobile-login-create-message-wireframe.png)
+
+![Mobile Wireframe log out tab](static/wireframes/mobile-login-create-message-wireframe.png)
+
+</details>
+
 ## CREDITS
 
 - https://coderwall.com/p/aey-rq/django-allauth-quick-setup
