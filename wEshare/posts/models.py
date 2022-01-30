@@ -27,3 +27,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.description
+
+hour = datetime.now().strftime("%H:%M")
+print(hour)
+new_period=(datetime.now().replace(hour=22, minute=35)).strftime('%H:%M')
+print(new_period)
+if hour == new_period:
+    # when the hour reaches certain period we make deletion of the post
+    print("The midnight is here, make function to delete a clss description")
+else:
+    print("Not midnight yet")
