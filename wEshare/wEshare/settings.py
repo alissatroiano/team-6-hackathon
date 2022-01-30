@@ -9,11 +9,12 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+
 import os
 from pathlib import Path
 import dj_database_url
 
-# # Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -26,7 +27,7 @@ SECRET_KEY = '-(+f*$+!-@&2pex@#c)b*1&5xb6!mwg111#(4%vy@nmv)pq)c7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['we-share22.herokuapp.com', '*']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -53,7 +54,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # adding timeout session after installation
 ]
 
 # SESSION_EXPIRE_SECONDS = 3600  # 1 hour as an example,timeout function can be arranged
@@ -91,6 +91,8 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = 'none'
@@ -99,24 +101,25 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/posts/view_posts'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
-# ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = False
-# ACCOUNT_SIGNUP_REDIRECT_URL = "/"
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = False
+ACCOUNT_SIGNUP_REDIRECT_URL = "/"
 
 WSGI_APPLICATION = 'wEshare.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-DATABASES = {
-   'default': dj_database_url.parse('postgres://lasfhowpqjujzn:77f30f3544be6cf35d8892013cf590523d755bb1117826d89625d6044ac8fad4@ec2-34-203-114-67.compute-1.amazonaws.com:5432/dd8s0d9jm5miov')
-}
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse('postgres://lasfhowpqjujzn:77f30f3544be6cf35d8892013cf590523d755bb1117826d89625d6044ac8fad4@ec2-34-203-114-67.compute-1.amazonaws.com:5432/dd8s0d9jm5miov')
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -155,14 +158,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-MEDIAFILES_LOCATION = 'media'
-
-# Media
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
@@ -170,6 +166,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Activate Django-Heroku.
 import django_heroku
 django_heroku.settings(locals())

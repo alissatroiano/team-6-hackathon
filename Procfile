@@ -1,1 +1,1 @@
-web: gunicorn wEshare.wsgi:application
+web: gunicorn --chdir wEshare wEshare.wsgi -b 0.0.0.0:$PORT
