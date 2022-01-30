@@ -34,12 +34,11 @@ The final version of this website will allow weShare to achieve its' goals by im
 
 | ID | ROLE | ACTION | GOAL | STATUS |
 |-----------------|:-------------|:---------------:|---------------:| ---------------:|
-| 1 | USER | As a user, I want to be able to rate my mindfulness | So I can receive my custom eCare package | Incomplete |
-| 2 | USER | As a user, I want to be able to view my weShare wellness scores | So I can understand my mental well-being and weShare package items | Incomplete |
-| 3 | USER | As a user, I want to be able to select one of the activities in my care package | So I can complete the activity I feel I need the most | Incomplete |
-| 4 | USER | As a user, I want to be able to complete the activities in my care package | So I can use the wellness materials provided for me | Incomplete |
-| 5 | CUSTOMER | As a customer, I want to provide a fun, uplifting program | So the mental health needs of my employees can be addressed | Incomplete |
-| 6 | CUSTOMER | As a customer, I want weShare to provide additional resources | So my employees can access emergency mental health services if needed | Incomplete |
+| 1 | USER | As a user, I want access to a workplace safe space | So I can share my thoughts with others | Incomplete |
+| 2 | USER | As a user, I want to select how I feel that day | So I can share how I feel with others | Incomplete |
+| 3 | USER | As a user, I want the option to post in a safe space | So I can unburden myself  | Incomplete |
+| 4 | USER | As a user, I want to be able to complete the daily activity | So I can use the wellness materials provided for me | Incomplete |
+| 5 | CUSTOMER | As a customer, I want to provide a safe space | So the mental health needs of my employees can be addressed | Incomplete |
 | 7 | CUSTOMER | As a customer, I want the product to be easy to navigate | So my employees can use it easily | Incomplete |
 | 8 | CUSTOMER | As a customer, I want the product to include appropriate content | So my employees will have a positive experience using it | Incomplete |
 | 9 | CUSTOMER | As a customer, I want the product to target the needs of specific users | So all employees will have a positive experience using it | Incomplete |
@@ -48,4 +47,4 @@ The final version of this website will allow weShare to achieve its' goals by im
 
 - https://coderwall.com/p/aey-rq/django-allauth-quick-setup
 
-- 
+- Code for background gradient sourced from https://www.sliderrevolution.com/resources/css-animated-background/
