@@ -15,7 +15,7 @@ The goal of wShare is to provide a full-stack application that workplace profess
 
 In order to determine the features for this web application, our team conducted the following trade-off activity:
 
-![feature trade off](wireframes/tradeoff.png)
+![feature trade off](static/wireframes/tradeoff.png)
 
 ***
 
@@ -34,18 +34,79 @@ The final version of this website will allow weShare to achieve its' goals by im
 
 | ID | ROLE | ACTION | GOAL | STATUS |
 |-----------------|:-------------|:---------------:|---------------:| ---------------:|
-| 1 | USER | As a user, I want to be able to rate my mindfulness | So I can receive my custom eCare package | Incomplete |
-| 2 | USER | As a user, I want to be able to view my weShare wellness scores | So I can understand my mental well-being and weShare package items | Incomplete |
-| 3 | USER | As a user, I want to be able to select one of the activities in my care package | So I can complete the activity I feel I need the most | Incomplete |
-| 4 | USER | As a user, I want to be able to complete the activities in my care package | So I can use the wellness materials provided for me | Incomplete |
-| 5 | CUSTOMER | As a customer, I want to provide a fun, uplifting program | So the mental health needs of my employees can be addressed | Incomplete |
-| 6 | CUSTOMER | As a customer, I want weShare to provide additional resources | So my employees can access emergency mental health services if needed | Incomplete |
+| 1 | USER | As a user, I want access to a workplace safe space | So I can share my thoughts with others | Incomplete |
+| 2 | USER | As a user, I want to select how I feel that day | So I can share how I feel with others | Incomplete |
+| 3 | USER | As a user, I want the option to post in a safe space | So I can unburden myself  | Incomplete |
+| 4 | USER | As a user, I want to be able to complete the daily activity | So I can use the wellness materials provided for me | Incomplete |
+| 5 | CUSTOMER | As a customer, I want to provide a safe space | So the mental health needs of my employees can be addressed | Incomplete |
 | 7 | CUSTOMER | As a customer, I want the product to be easy to navigate | So my employees can use it easily | Incomplete |
 | 8 | CUSTOMER | As a customer, I want the product to include appropriate content | So my employees will have a positive experience using it | Incomplete |
 | 9 | CUSTOMER | As a customer, I want the product to target the needs of specific users | So all employees will have a positive experience using it | Incomplete |
+
+### Wireframes
+
+<details><summary><b>Desktop Wireframes</b></summary>
+
+![Desktop Wireframe Log In page](static/wireframes/desktop-user-landing-page-wireframe.png)
+
+![Desktop Wireframe create account](static/wireframes/desktop-user-profile-creation-wireframe.png)
+
+![Desktop Wireframe Home Page](static/wireframes/desktop-user-login-wireframe.png)
+
+![Desktop Wireframe creating a message](static/wireframes/desktop-login-create-message-wireframe.png)
+
+</details>
+<details><summary><b>Tablet Wireframes</b></summary>
+
+![Tablet Wireframe Log in page](static/wireframes/tablet-user-landing-page-wireframe.png)
+
+![Tablet Wireframe create account](static/wireframes/tablet-user-profile-creation-wireframe.png)
+
+![Tablet Wireframe Home page](static/wireframes/tablet-user-login-wireframe.png)
+
+![Tablet Wireframe create message](static/wireframes/tablet-login-create-message-wireframe.png)
+
+</details>
+<details><summary><b>Mobile Wireframes</b></summary>
+
+![Mobile Wireframe Log in page](static/wireframes/mobile-user-landing-page-wirerame.png)
+
+![Mobile Wireframe create account](static/wireframes/mobile-user-profile-creation-wireframe.png)
+
+![Mobile Wireframe Home page](static/wireframes/mobile-user-login-wireframe.png)
+
+![Mobile Wireframe create message](static/wireframes/mobile-login-create-message-wireframe.png)
+
+![Mobile Wireframe log out tab](static/wireframes/mobile-login-create-message-wireframe.png)
+
+</details>
+
+## Technologies Used
+
+### Languages Used
+* HTML5
+* CSS3
+* Javascript
+* Django
+* 
+* 
+
+### Technologies and Programs Used
+* GitHub
+    - The Git was used for version control
+    - GitPod was the IDE used
+* Heroku was used to deploy the site
+* 
+* 
+* 
+
+### Libraries and Programs Used
+* Adobe XD was used to create the wireframes
+* 
+* 
 
 ## CREDITS
 
 - https://coderwall.com/p/aey-rq/django-allauth-quick-setup
 
-- 
+- Code for background gradient sourced from https://www.sliderrevolution.com/resources/css-animated-background/
