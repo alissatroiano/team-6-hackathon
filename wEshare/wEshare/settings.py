@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '-(+f*$+!-@&2pex@#c)b*1&5xb6!mwg111#(4%vy@nmv)pq)c7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -113,15 +113,15 @@ WSGI_APPLICATION = 'wEshare.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
-    'default': dj_database_url.parse('postgres://lasfhowpqjujzn:77f30f3544be6cf35d8892013cf590523d755bb1117826d89625d6044ac8fad4@ec2-34-203-114-67.compute-1.amazonaws.com:5432/dd8s0d9jm5miov')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://lasfhowpqjujzn:77f30f3544be6cf35d8892013cf590523d755bb1117826d89625d6044ac8fad4@ec2-34-203-114-67.compute-1.amazonaws.com:5432/dd8s0d9jm5miov')
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
