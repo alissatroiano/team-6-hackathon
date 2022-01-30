@@ -8,6 +8,11 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+STATUS = (
+    (0,"Draft"),
+    (1,"Publish")
+)
+
 class Post(models.Model):
     """ An instance of a post """
     description = models.CharField(max_length=1000,blank=True, primary_key=True)
@@ -16,6 +21,7 @@ class Post(models.Model):
     date_updated = models.DateTimeField(auto_now=True, verbose_name="date updated")
     user = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE)
     # publishing_date = models.DateTimeField(default = timezone.now)
+    status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
         verbose_name_plural = 'Posts'
