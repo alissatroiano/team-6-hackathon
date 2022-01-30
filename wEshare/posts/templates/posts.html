@@ -21,12 +21,17 @@
 		{% for post in posts %}
 		<div class="col-12">
 			<div class="card my-3">
-				<p>{{ post.user }}: {{ post.description }}</p>
+				<p>{{ post.user }}: {{ post.description }}
+					{{ post.content }}
+				</p>
 				<p class="text-small">{{ post.date_published }}</p>
 			</div>
 			{% endfor %}
 		</div>
 	</div>
 </div>
+
+
+
 
 {% endblock %}`

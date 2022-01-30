@@ -21,7 +21,7 @@ class Post(models.Model):
         verbose_name_plural = 'Posts'
         verbose_name = 'Post'
         ordering = ['-date_published']
-        
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 

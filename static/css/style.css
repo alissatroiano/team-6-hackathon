@@ -91,7 +91,13 @@ h1.intro-grid-row-2 {
 
 #sign-in-section,
 #log-out-section {
+	width: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	padding: 10px;
+	margin: auto;
 	text-align: center;
 }
 
