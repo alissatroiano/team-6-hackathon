@@ -15,7 +15,7 @@ The goal of wShare is to provide a full-stack application that workplace profess
 
 In order to determine the features for this web application, our team conducted the following trade-off activity:
 
-![feature trade off](wireframes/tradeoff.png)
+![feature trade off](static/wireframes/tradeoff.png)
 
 ***
 
