@@ -81,6 +81,30 @@ The final version of this website will allow weShare to achieve its' goals by im
 
 </details>
 
+## Technologies Used
+
+### Languages Used
+* HTML5
+* CSS3
+* Javascript
+* Django
+* 
+* 
+
+### Technologies and Programs Used
+* GitHub
+    - The Git was used for version control
+    - GitPod was the IDE used
+* Heroku was used to deploy the site
+* 
+* 
+* 
+
+### Libraries and Programs Used
+* Adobe XD was used to create the wireframes
+* 
+* 
+
 ## CREDITS
 
 - https://coderwall.com/p/aey-rq/django-allauth-quick-setup
