@@ -111,7 +111,6 @@ h1.intro-grid-row-2 {
 }
 
 /* Username and password input styles */
-
 input#id_login,
 input#id_password {
 	background: #fcfcfc;
@@ -158,4 +157,30 @@ p#activity {
 a.navbar-brand {
 	font-family: 'Comforter', cursive;
 	font-family: 2rem;
+}
+
+/* Posts Page Styles */
+.card {
+	color: white;
+	background-color: #927397;
+	margin: 10px 40px;
+	border: 2px solid #dedede;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.btn {
+	background-color: #0b6623;
+}
+
+.btn-primary {
+	border: none;
+	margin-top: 15px;
+	margin-right: 10px;
+	float: right;
+
+}
+
+.btn-primary:hover {
+	background-color: #cc92f8;
 }
