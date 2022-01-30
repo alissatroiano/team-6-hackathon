@@ -36,8 +36,10 @@ def create_post(request):
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
+            post = form.save(commit=False)
+            post.user = request.user
             form.save()
-            return redirect(reverse('create_post'))
+            return redirect(reverse('view_posts'))
     else:
         form = PostForm()
 
@@ -45,5 +47,7 @@ def create_post(request):
     context = {
         'form': form,
     }
+
+    return render(request, template, context)
 
     return render(request, template, context)
