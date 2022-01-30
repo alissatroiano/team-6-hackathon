@@ -54,6 +54,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Simplified static file serving.
+    # https://warehouse.python.org/project/whitenoise/
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 # SESSION_EXPIRE_SECONDS = 3600  # 1 hour as an example,timeout function can be arranged
@@ -109,17 +113,15 @@ WSGI_APPLICATION = 'wEshare.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse('postgres://lasfhowpqjujzn:77f30f3544be6cf35d8892013cf590523d755bb1117826d89625d6044ac8fad4@ec2-34-203-114-67.compute-1.amazonaws.com:5432/dd8s0d9jm5miov')
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+DATABASES = {
+    'default': dj_database_url.parse('postgres://lasfhowpqjujzn:77f30f3544be6cf35d8892013cf590523d755bb1117826d89625d6044ac8fad4@ec2-34-203-114-67.compute-1.amazonaws.com:5432/dd8s0d9jm5miov')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
