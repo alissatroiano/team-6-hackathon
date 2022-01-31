@@ -162,7 +162,8 @@ a.navbar-brand {
 /* Posts Page Styles */
 .card {
 	color: white;
-	background-color: #927397;
+	background: linear-gradient(-45deg, #57c0b4, #20685f, #117267, #57c0b4);
+	;
 	margin: 10px 40px;
 	border: 2px solid #dedede;
 	border-radius: 10px;
@@ -170,7 +171,7 @@ a.navbar-brand {
 }
 
 .btn {
-	background-color: #0b6623;
+	background: linear-gradient(-45deg, #57c0b4, #20685f, #117267, #57c0b4);
 }
 
 .btn-primary {
@@ -182,5 +183,20 @@ a.navbar-brand {
 }
 
 .btn-primary:hover {
-	background-color: #cc92f8;
+	background: linear-gradient(-45deg, #57c0b4, #20685f, #117267, #57c0b4);
+}
+
+#micro--act {
+	background-color: #f3969a;
+	width: 60%;
+	margin: auto;
+	border-radius: 20px;
+	text-align: center;
+	color: white;
+	height: 306px;
+	position: relative;
+}
+
+div#activity {
+	font-size: 14px;
 }
