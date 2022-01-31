@@ -8,12 +8,15 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['description', 'content']
         
+        
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
+        self.fields['description'].label = "Alias"
+        self.fields['content'].label = "Message"
    
     content = forms.CharField(
         required=False,
@@ -30,3 +33,4 @@ class PostForm(forms.ModelForm):
             'width':'100%',
             'class': 'form-control', 'text-center'
             'placeholder': 'Add an image, quote or video url of your choice!'}))
+    

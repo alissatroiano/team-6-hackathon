@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse
+from re import template
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from allauth.account.forms import LoginForm
 from allauth.account.views import SignupView
 from django.contrib.auth.decorators import login_required
@@ -52,42 +53,21 @@ def create_post(request):
 
     return render(request, template, context)
 
-    return render(request, template, context)
-
-    # Dear Alissa, each video I watched that was uploaded within last year or less
-    # Has had a new html file with the edit/update post which this function would
-    # Redirect them, but we dont do it like that, I might be missing some logic behind
-    # the functions that you created and fair play for making those, but, after trying 
-    # this function still doesn't work, I would really have preffered that i figured
-    # it out but somehow I dont, I will wake up much before submission so maybe we
-    # could chat if I could be of any help, but I put this in comment since it would
-    # not open the page for me to test it, so this is why i will comment out anything
-    # related to 'edit_post' func, hope that any of this code helps but if not, feel
-    # free to arrange your own since the consistency is also relevant, its 7:40 so I
-    # will leave it in hope that maybe at least this could inspire your solution, you are
-    # amazing and please remember that, we have come a long way moctly because of you and
-    # your guidance, I appreciate you so much, sorry I did not manage this
+# @login_required
+# def edit_post(request, post_id):
+#     """ Editing existing posts """
+#     post = get_object_or_404(Post, unique_id=post_id)
+#     PostFormSet = modelformset_factory(
+#         Post, fields=('description', 'content'),form=PostForm, extra=0)
     
-    # @login_required
-    # def edit_post(UpdateView):
-    #     """ Editing existing posts """
-    #     posts_value = Post.content
-
-    #     if request.method == 'POST':
-    #         form = PostForm(request.POST)
-    #     try:
-    #         if form.is_valid():
-    #             form.save
-    #             post.user = request.user
-    #             messages.success(request, 'Your post was edited')
-    #             return redirect(reverse('edit_post'))
-        
-    #     except Exception as e:
-    #         messages.warning(request, 'Your post was not edited this time')
-    #     else:
-    #         form = PostForm()
-    #     context = {
-    #         'posts': post
-    #     }
-
-    #     return render(request, template, context)
+#     if request.method == 'GET':
+#         formset = PostFormSet(queryset=Post.objects.filter(post=post))
+#         return render(request, 'edit_posts.html', {'formset': formset})
+#     else:
+#         formset = PostFormSet(request.POST, queryset=Post.objects.filter(post=post))
+#         if formset.is_valid():
+#             formset.save()
+#             return redirect('view_posts')
+#         else:
+#             return render(request, template, context)
+ 

@@ -13,6 +13,14 @@
 <header>
 	{% include 'nav.html' %}
 </header>
+
+<h1 class="display-4 text-success text-center">wEshare hEre <i class="fas fa-chevron-down"></i></h1>
+<h4 class="text-center fw-light my-0 mx-auto px-5"><em>This is a safe space for you to share your thoughts, feelings or
+		whatever may be on
+		your
+		mind.
+		You may choose to post anonymously or using your real name.</em></h4>
+
 <div class="container-fluid">
 	<div class="row text-center d-flex">
 		<div class="col-12">
@@ -31,21 +39,21 @@
 		</div>
 	</div>
 </div>
-<h1 class="display-4 text-success text-center">wEshare hEre <i class="fas fa-chevron-down"></i></h1>
-<h4 class="text-center fw-light my-0 mx-auto px-5"><em>This is a safe space for you to share your thoughts, feelings or
-		whatever may be on
-		your
-		mind.
-		You may choose to post anonymously or using your real name.</em></h4>
-<div class="container">
+
+<div class="container-fluid">
 	<div class="row">
 		{% for post in posts %}
 		<div class="col-12">
-			<div class="card my-3">
-				<p>{{ post.user }}: {{ post.description }}
-					{{ post.content }}
-				</p>
-				<p class="text-small">{{ post.date_published }}</p>
+			<div class="card mx-3 my-3">
+				<div class="card-body">
+					<small>{{ post.description }}:</small>
+					<p>{{ post.content }}</p>
+				</div>
+				<div class="card-footer">
+					<p class="text-small">{{ post.date_published }}</p>
+					<br>
+					<a href="{% url 'edit_post' post_id=post.unique_id %}" class="btn btn-primary">Edit Post</a>
+				</div>
 			</div>
 			{% endfor %}
 		</div>

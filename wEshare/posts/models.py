@@ -1,3 +1,4 @@
+from ast import alias
 from django.db import models
 import uuid
 from django.utils import timezone
@@ -27,16 +28,3 @@ class Post(models.Model):
 
     def __str__(self):
         return self.description
-
-    
-
-   
-# hour = datetime.now().strftime("%H:%M")
-# print(hour)   --> hour at the moment with minutes
-# new_period=(datetime.now().replace(hour=8, minute=10)).strftime('%H:%M')
-# print(new_period)
-# if hour == new_period:
-#     # when the hour reaches certain period we make deletion of the post
-#     print("The midnight is here, make function to delete a clss description")
-# else:
-#     print("Not midnight yet")
