@@ -2,20 +2,41 @@
 {% load static %}
 {% load i18n %}
 
+<!-- {% block js %}
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous"></script>
+<title>Document</title>
+{% endblock %} -->
+
 {% block content %}
 <header>
 	{% include 'nav.html' %}
 </header>
-<div class="container">
+<div class="container-fluid">
 	<div class="row text-center d-flex">
 		<div class="col-12">
-			<small>
-				<p class="prompt" id="activity"></p>
-			</small>
+			<div class="card" id="micro--act">
+				<div class="card-header">
+					<small>
+						Micro Activity - Take a moment to perform a small task, reflect and refocus. Share your
+						experiences
+						in the chat!</small>
+				</div>
+				<div class="card-body">
+					<div class="card-text" id="activity"><small></small></div>
+					<a href="#" class="btn btn-primary" id="btn--activity">New Activity</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
-<h1 class="display-4 text-success text-center">Feed</h1>
+<h1 class="display-4 text-success text-center">wEshare hEre <i class="fas fa-chevron-down"></i></h1>
+<h4 class="text-center fw-light my-0 mx-auto px-5"><em>This is a safe space for you to share your thoughts, feelings or
+		whatever may be on
+		your
+		mind.
+		You may choose to post anonymously or using your real name.</em></h4>
 <div class="container">
 	<div class="row">
 		{% for post in posts %}
@@ -30,8 +51,17 @@
 		</div>
 	</div>
 </div>
+<!-- 
+{% block postloadjs %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous"></script>
+{% endblock %} -->
 
-
-
-
-{% endblock %}`
+{% endblock %}
