@@ -2,10 +2,10 @@ from ast import alias
 from django.db import models
 import uuid
 from django.utils import timezone
-from datetime import datetime
+from datetime import datetime, timedelta
+
 now = timezone.now
 from django.contrib.auth.models import User
-from django.conf import settings
 
 # Create your models here.
 
@@ -28,3 +28,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.description
+    
+    def will_expire(self):
+        """ A view to set an expiration time on posts """
+        if self.date_published <= datetime.now():
+            self.delete()
+            return False
