@@ -14,6 +14,7 @@ body {
 	letter-spacing: 4px;
 }
 
+body.posts,
 body.log-in-page,
 body.log-in-out-page {
 	background: linear-gradient(-45deg, #57c0b4, #20685f, #117267, #57c0b4);
@@ -155,10 +156,11 @@ a.navbar-brand {
 
 /* Posts Page Styles */
 .card {
-	color: white;
-	background-color: #927397;
+	background: #fafafade;
+	color: #252525;
 	margin: 10px 40px;
-	border: 2px solid #dedede;
+	border: none;
+	box-shadow: 1px 2px 6px 1px rgb(1, 22, 20);
 	border-radius: 10px;
 	padding: 10px;
 }

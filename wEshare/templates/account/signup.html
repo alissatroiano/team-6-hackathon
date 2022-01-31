@@ -1,21 +1,48 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
+{% load static %}
 
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
-
+<body class="log-in-page">
+  <div class="mt-5 pt-5"></div>
+  <section id="sign-up pt-5 my-5 mx-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="weshare-intro">
+            <h1 class="intro-grid-row-2">
+              <span class="tagline">New day new you</span>
+            </h1>
+            <img src="{% static 'images/weshare-white-logo.svg' %}" class="intro-grid-row-1" width="500" height="110"
+              alt="weshare written in decorative font">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center my-4">SIGN UP!</h1>
+          <form class="signup" id="sign-in-form" method="post" action="{% url 'account_signup' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+          </form>
+        </div>
+      </div>
+      <div class="row mt-5 pt-3s">
+        <div class="col-12 text-center">
+          <p>Already have an account?
+            <a href="{% url 'index' %}" class="fw-bold text-center text-light">LOG IN</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
 {% endblock %}

@@ -5,25 +5,28 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
-<div
-  class="container signin-container rounded-3 p-2 d-flex flex-column align-items-center justify-content-center mt-3 pb-4 mb-5">
-  <h1 class="text-center text-uppercase fw-bold fs-2"><i class="fa fa-snowflake-o snowflake-icon"
-      aria-hidden="true"></i>
-    {% trans "Sign Out" %}</h1>
-  <i class="fa fa-snowflake-o snowflake-icon" aria-hidden="true"></i>
-  </h1>
 
-  <p class="fw-bold text-center"> {% trans 'Are you sure you want to sign out?' %}</p>
+<body class="log-in-page">
+  <div class="mt-5 pt-5"></div>
+  <section id="sign-up pt-5 my-5 mx-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="fw-bold text-center"> {% trans 'Are you sure you want to sign out?' %}</p>
 
-  <form method="post" action="{% url 'account_logout' %}">
-    {% csrf_token %}
-    {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
-    <div class="button-container w-100 text-center">
-      <button class="mt-4 w-50 p-2 logout-btn primaryAction rounded-2" type="submit">{% trans "Sign Out" %}</button>
+          <form method="post" action="{% url 'account_logout' %}">
+            {% csrf_token %}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <div class="button-container w-100 text-center">
+              <button class="mt-4 w-50 p-2 logout-btn primaryAction rounded-2" type="submit">Sign Out</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-  </form>
-</div>
+  </section>
+</body>
 
 {% endblock %}
