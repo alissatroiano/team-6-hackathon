@@ -180,3 +180,8 @@ a.navbar-brand {
 .btn-primary:hover {
 	background-color: #cc92f8;
 }
+
+.bg-weshare {
+	background: #fafafad6;
+	box-shadow: 1px 2px 11px 0px #0a343a;
+}
