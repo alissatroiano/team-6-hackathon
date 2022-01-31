@@ -14,6 +14,11 @@ body {
 	letter-spacing: 4px;
 }
 
+.text-weshare {
+	color: #20685f;
+}
+
+.sign-up,
 body.log-in-page,
 body.log-in-out-page {
 	background: linear-gradient(-45deg, #57c0b4, #20685f, #117267, #57c0b4);
@@ -62,6 +67,12 @@ a:link:hover {
 	text-align: center;
 }
 
+h2.intro-grid-row-2 {
+	font-size: 1rem;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
 .weshare-intro h2,
 .weshare-outro h2 {
 	line-height: 2;
@@ -69,7 +80,7 @@ a:link:hover {
 	-webkit-text-stroke-width: 0.5px;
 	-webkit-text-stroke-color: #2b5c56;
 	text-shadow: 6px 6px #256b63;
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 }
 
 .intro-grid-row-2,
@@ -77,7 +88,7 @@ h1.intro-grid-row-2 {
 	grid-row: 2/3;
 	padding: 20px;
 	text-transform: uppercase;
-	font-size: 2.8rem;
+	font-size: 2.0rem;
 }
 
 .tagline {
@@ -142,6 +153,14 @@ button.primaryAction,
 	color: #252525;
 }
 
+.btn {}
+
+.btn-icon,
+i.mx-3.fas.fa-comment.fa-3x {
+	color: #e9c46a;
+}
+
+
 button.primaryAction:hover,
 .logout-button:hover {
 	background-color: #fafafa;
@@ -162,16 +181,15 @@ a.navbar-brand {
 /* Posts Page Styles */
 .card {
 	color: white;
-	background: linear-gradient(-45deg, #57c0b4, #20685f, #117267, #57c0b4);
-	;
+	background: linear-gradient(-45deg, #e9c56a98, #e9c46a, #ebce84c0, #e9c46a);
 	margin: 10px 40px;
 	border: 2px solid #dedede;
 	border-radius: 10px;
 	padding: 10px;
 }
 
-.btn {
-	background: linear-gradient(-45deg, #57c0b4, #20685f, #117267, #57c0b4);
+button.btn {
+	background-color: #57c0b4;
 }
 
 .btn-primary {
