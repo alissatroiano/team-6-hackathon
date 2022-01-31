@@ -2,56 +2,102 @@
 {% load static %}
 {% load i18n %}
 
-<!-- {% block js %}
+{% block js %}
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	crossorigin="anonymous"></script>
 <title>Document</title>
-{% endblock %} -->
+{% endblock %}
 
 {% block content %}
 <header>
 	{% include 'nav.html' %}
 </header>
-<div class="container-fluid">
-	<div class="row text-center d-flex">
-		<div class="col-12">
-			<div class="card" id="micro--act">
-				<div class="card-header">
-					<small>
-						Micro Activity - Take a moment to perform a small task, reflect and refocus. Share your
+
+<body class="posts">
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 text-center mt-5">
+				<h1 class="display-4 text-weshare text-center" style="color: #fafafa;">wEshare</h1>
+				<h4 class="text-center fw-light my-3 mx-5 px-5" style="font-size: 1rem;">
+					<em>This is a safe space for you to share your thoughts, feelings or
+						whatever may be on
+						your
+						mind.
+						You may choose to post anonymously or using your real name.</em>
+				</h4>
+			</div>
+		</div>
+		<div class="row my-3">
+			<div class="d-flex justify-content-center">
+				<div class="col-12 d-flex justify-content-center">
+					<!-- Button trigger modal -->
+					<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+						style="background-color: #e9c46a; box-shadow: 3px 3px 3px rgb(48, 48, 48);">
+						<p>Daily Micro Activity</p>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			{% for post in posts %}
+			<div class="col-12">
+				<div class="d-flex justify-content-center">
+					<div class="card " style="max-width: fit-content;">
+						<div class="card-body">
+							<p><strong>{{ post.description }}:</strong> {{ post.content }}</p>
+							<p class="text-small" style="font-size: 12px;">{{ post.date_published }}</p>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="fixed-bottom text-center bg-transparent my-3 pt-3">
+		<div class="my-3 mx-2 float-end">
+			<a class="btn-icon" href="{% url 'create_post' %}">
+				<i class="mx-3 fas fa-comment fa-4x"
+					style="color: #e9c46a; text-shadow: 4px 6px 3px rgb(48, 48, 48); border-color: none;"></i></a>
+		</div>
+	</footer>
+</body>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="staticBackdropLabel">Daily Micro Activity</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="card w-auto bg-transparent text-dark" id="micro--act">
+					<div class="card-header" style="font-size: 12px;">
+						Micro Activity - Take a moment to perform a small task, reflect and refocus. Share
+						your
 						experiences
-						in the chat!</small>
+						in the chat!
+					</div>
+					<div class="card-body">
+						<div class="card-text" id="activity" style="font-size: 12px;"></div>
+					</div>
 				</div>
-				<div class="card-body">
-					<div class="card-text" id="activity"><small></small></div>
-					<a href="#" class="btn btn-primary" id="btn--activity">New Activity</a>
-				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-bs-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>
 </div>
-<h1 class="display-4 text-success text-center">wEshare hEre <i class="fas fa-chevron-down"></i></h1>
-<h4 class="text-center fw-light my-0 mx-auto px-5"><em>This is a safe space for you to share your thoughts, feelings or
-		whatever may be on
-		your
-		mind.
-		You may choose to post anonymously or using your real name.</em></h4>
-<div class="container">
-	<div class="row">
-		{% for post in posts %}
-		<div class="col-12">
-			<div class="card my-3">
-				<p>{{ post.user }}: {{ post.description }}
-					{{ post.content }}
-				</p>
-				<p class="text-small">{{ post.date_published }}</p>
-			</div>
-			{% endfor %}
-		</div>
-	</div>
-</div>
-<!-- 
+
 {% block postloadjs %}
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -62,6 +108,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	crossorigin="anonymous"></script>
-{% endblock %} -->
+{% endblock %}
 
 {% endblock %}

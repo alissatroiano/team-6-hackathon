@@ -9,5 +9,5 @@ class PostAdmin(admin.ModelAdmin):
         'user',
      ]
     fields = [
-          'description', 'user', 'content',
+          'user', 'message', 'alias',
           ]

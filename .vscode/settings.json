@@ -26,5 +26,8 @@
    "editor.defaultFormatter": "HookyQR.beautify",
    "cSpell.ignoreWords": [
       "Eshare"
-   ]
+   ],
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.python"
+   }
 }
